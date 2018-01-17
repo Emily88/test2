@@ -1,0 +1,14 @@
+.menuSection {
+    width: 300px;
+    height: 500px;
+    float: left;
+}
+
+.executeSection {
+
+}
+
+button {
+    display: block;
+    margin-top: 5px;
+}
