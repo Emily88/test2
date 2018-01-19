@@ -3,7 +3,8 @@
     initialize();
   });
 
-  var $animationViewEl = $();
+  var $animationViewEl = $(),
+    $shapeSvgEl = $();
 
   function initialize() {
     $animationViewEl = $(".executeSection");
@@ -12,10 +13,14 @@
   }
 
   function registerEvt() {
-    $("button").click(function (e) {
-      var animationType = $(e.currentTarget).attr("value"),
-      $shapeSvgEl = $animationViewEl.children("svg").children("circle");
+    $(document).bind("animationend", function() {
+      $shapeSvgEl.removeClass();
+    });
 
+    $("button").click(function (e) {
+      var animationType = $(e.currentTarget).attr("value");
+
+      $shapeSvgEl = $animationViewEl.children("svg").children("circle");
       $shapeSvgEl.removeClass();
 
       if (animationType === "1") {

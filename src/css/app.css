@@ -11,17 +11,23 @@ button {
 
 .ani2 {
     -webkit-animation-name: brightUp; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
     animation-name: brightUp;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 
 @keyframes brightUp {
-    from {
-        opacity: 0;
-    }
+    0%   {opacity: 0;}
+    25%  {opacity: 0.25;}
+    50%  {opacity: 0.5;}
+    100% {opacity: 1;}
+}
 
-    to {
-        opacity: 100;
-    }
+ani3 {
+    /*-webkit-animation-name: comeFromBottom; !* Safari 4.0 - 8.0 *!*/
+    /*-webkit-animation-duration: 3s; !* Safari 4.0 - 8.0 *!*/
+    /*animation-name: comeFromBottom;*/
+    /*animation-duration: 3s;*/
+
+    transform: translate3d(0px, -150px, 0px);
 }
