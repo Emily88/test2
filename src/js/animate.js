@@ -39,8 +39,12 @@
         $shapeSvgEl.addClass("fadeOut");
       } else if (animationType === "5") {
         $shapeSvgEl.addClass("flyIn");
-      }  else if (animationType === "6") {
+      } else if (animationType === "6") {
         $shapeSvgEl.addClass("flyOut");
+      } else if (animationType === "7") {
+        $shapeSvgEl.addClass("scaleUp");
+      } else if (animationType === "8") {
+        $shapeSvgEl.addClass("scaleDown");
       }
     });
   }
