@@ -12,7 +12,7 @@
     $originalViewEl = $(".original_view");
     $shapeSvgEl = $animationViewEl.children("svg").children("circle");
 
-    $animationViewEl.hide();
+    //$animationViewEl.hide();
     registerEvt();
   }
 
@@ -20,28 +20,42 @@
     $(document).bind("animationend", function() {
       console.error("animationend evt!");
 
-      switchPane(true);
+      //switchPane(true);
       $shapeSvgEl.removeClass();
     });
 
     $("button").click(function (e) {
-      var animationType = $(e.currentTarget).attr("value");
+      var animationType = +$(e.currentTarget).attr("value");
 
-      switchPane(false);
+      //switchPane(false);
+      //$shapeSvgEl.removeClass();
 
-      if (animationType === "1") {
+      if (animationType === 1) {
         $shapeSvgEl.addClass("showUp");
-      } else if (animationType === "2") {
+      } else if (animationType === 2) {
         $shapeSvgEl.addClass("disappear");
-      } else if (animationType === "3") {
+      } else if (animationType === 3) {
         $shapeSvgEl.addClass("fadeIn");
-      } else if (animationType === "4") {
+      } else if (animationType === 4) {
         $shapeSvgEl.addClass("fadeOut");
-      } else if (animationType === "5") {
-        $shapeSvgEl.addClass("flyIn");
-      }  else if (animationType === "6") {
-        $shapeSvgEl.addClass("flyOut");
+      } else if (animationType === 5) {
+        $shapeSvgEl.addClass("flyFromLeft");
+      } else if (animationType === 6) {
+        $shapeSvgEl.addClass("flyToLeft");
+      } else if (animationType === 7) {
+        $shapeSvgEl.addClass("scaleUp");
+      } else if (animationType === 8) {
+        $shapeSvgEl.addClass("scaleDown");
+      } else if (animationType === 9) {
+        $shapeSvgEl.addClass("flyFromRight");
+      } else if (animationType === 10) {
+        $shapeSvgEl.addClass("flyToRight");
+      } else if (animationType === 11) {
+        $shapeSvgEl.addClass("flyFromBottom");
+      } else if (animationType === 12) {
+        $shapeSvgEl.addClass("flyToBottom");
       }
+
     });
   }
 

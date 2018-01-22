@@ -8,8 +8,6 @@ button {
 }
 
 .showUp {
-    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
     animation-name: showUp;
     animation-duration: 0.5s;
 }
@@ -20,45 +18,67 @@ button {
 }
 
 .disappear {
-    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
     animation-name: showUp;
     animation-duration: 0.5s;
-    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
     animation-direction: reverse;
 }
 
 .fadeIn {
-    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
     animation-name: showUp;
     animation-duration: 2s;
 }
 
 .fadeOut {
-    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
     animation-name: showUp;
     animation-duration: 2s;
-    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
     animation-direction: reverse;
 }
 
-.flyIn {
-    /*-webkit-animation-name: showUp; !* Safari 4.0 - 8.0 *!*/
-    /*-webkit-animation-duration: 2s; !* Safari 4.0 - 8.0 *!*/
-    /*animation-name: showUp;*/
-    /*animation-duration: 2s;*/
+.flyFromLeft {
+    animation-name: flyToLeft;
+    animation-duration: 2s;
+    animation-direction: reverse;
 }
 
-.flyOut {
-    -webkit-animation-name: flyOut; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
-    animation-name: flyOut;
+.flyToLeft {
+    animation-name: flyToLeft;
     animation-duration: 2s;
 }
 
-@keyframes flyOut {
-    0%   {top:0px;}
-    100% {top:300px;}
+@keyframes flyToLeft {
+    to {transform: translateX(0);}
 }
+
+.flyFromRight {
+    animation-name: flyToRight;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.flyToRight {
+    animation-name: flyToRight;
+    animation-duration: 2s;
+}
+
+
+@keyframes flyToRight {
+    to {transform: translateX(200);}
+}
+
+.scaleUp {
+    animation-name: scaleUp;
+    animation-duration: 2s;
+}
+
+.scaleDown {
+    animation-name: scaleUp;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+@keyframes scaleUp  {
+    100%   {transform: scale(1.5);}
+}
+
+
+
