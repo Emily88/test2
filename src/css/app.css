@@ -2,32 +2,63 @@
     width: 300px;
 }
 
-.executeSection {}
-
 button {
     display: block;
     margin-top: 5px;
 }
 
-.ani2 {
-    -webkit-animation-name: brightUp; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
-    animation-name: brightUp;
-    animation-duration: 3s;
+.showUp {
+    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: showUp;
+    animation-duration: 0.5s;
 }
 
-@keyframes brightUp {
+@keyframes showUp {
     0%   {opacity: 0;}
-    25%  {opacity: 0.25;}
-    50%  {opacity: 0.5;}
     100% {opacity: 1;}
 }
 
-ani3 {
-    /*-webkit-animation-name: comeFromBottom; !* Safari 4.0 - 8.0 *!*/
-    /*-webkit-animation-duration: 3s; !* Safari 4.0 - 8.0 *!*/
-    /*animation-name: comeFromBottom;*/
-    /*animation-duration: 3s;*/
+.disappear {
+    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: showUp;
+    animation-duration: 0.5s;
+    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
+    animation-direction: reverse;
+}
 
-    transform: translate3d(0px, -150px, 0px);
+.fadeIn {
+    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: showUp;
+    animation-duration: 2s;
+}
+
+.fadeOut {
+    -webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: showUp;
+    animation-duration: 2s;
+    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
+    animation-direction: reverse;
+}
+
+.flyIn {
+    /*-webkit-animation-name: showUp; !* Safari 4.0 - 8.0 *!*/
+    /*-webkit-animation-duration: 2s; !* Safari 4.0 - 8.0 *!*/
+    /*animation-name: showUp;*/
+    /*animation-duration: 2s;*/
+}
+
+.flyOut {
+    -webkit-animation-name: flyOut; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: flyOut;
+    animation-duration: 2s;
+}
+
+@keyframes flyOut {
+    0%   {top:0px;}
+    100% {top:300px;}
 }

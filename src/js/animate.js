@@ -4,38 +4,54 @@
   });
 
   var $animationViewEl = $(),
+    $originalViewEl = $(),
     $shapeSvgEl = $();
 
   function initialize() {
-    $animationViewEl = $(".executeSection");
+    $animationViewEl = $(".animation_preview_pane");
+    $originalViewEl = $(".original_view");
+    $shapeSvgEl = $animationViewEl.children("svg").children("circle");
 
+    $animationViewEl.hide();
     registerEvt();
   }
 
   function registerEvt() {
     $(document).bind("animationend", function() {
+      console.error("animationend evt!");
+
+      switchPane(true);
       $shapeSvgEl.removeClass();
     });
 
     $("button").click(function (e) {
       var animationType = $(e.currentTarget).attr("value");
 
-      $shapeSvgEl = $animationViewEl.children("svg").children("circle");
-      $shapeSvgEl.removeClass();
+      switchPane(false);
 
       if (animationType === "1") {
-        $animationViewEl.hide();
-
-        setTimeout(function() {
-          $animationViewEl.show();
-        }, 100)
+        $shapeSvgEl.addClass("showUp");
       } else if (animationType === "2") {
-        $shapeSvgEl.addClass("ani2");
+        $shapeSvgEl.addClass("disappear");
       } else if (animationType === "3") {
-        $shapeSvgEl.addClass("ani3");
+        $shapeSvgEl.addClass("fadeIn");
       } else if (animationType === "4") {
-        $shapeSvgEl.addClass("ani4");
+        $shapeSvgEl.addClass("fadeOut");
+      } else if (animationType === "5") {
+        $shapeSvgEl.addClass("flyIn");
+      }  else if (animationType === "6") {
+        $shapeSvgEl.addClass("flyOut");
       }
-    })
+    });
+  }
+
+  function switchPane(option) {
+    if (option) {
+      $originalViewEl.show();
+      $animationViewEl.hide();
+    } else {
+      $originalViewEl.hide();
+      $animationViewEl.show();
+    }
   }
 })();
