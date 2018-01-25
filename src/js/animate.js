@@ -9,8 +9,8 @@
 
   function initialize() {
     $animationViewEl = $(".animation_preview_pane");
-    $originalViewEl = $(".original_view");
-    $shapeSvgEl = $animationViewEl.children("svg").children("circle");
+    $originalViewEl = $(".slideView");
+    $shapeSvgEl = $animationViewEl.children("svg").children("rect");
 
     //$animationViewEl.hide();
     registerEvt();
@@ -54,8 +54,13 @@
         $shapeSvgEl.addClass("flyFromBottom");
       } else if (animationType === 12) {
         $shapeSvgEl.addClass("flyToBottom");
+      } else if (animationType === 13) {
+        $shapeSvgEl.addClass("flyFromTop");
+      } else if (animationType === 14) {
+        $shapeSvgEl.addClass("flyToTop");
+      } else if (animationType === 15) {
+        $shapeSvgEl.addClass("rotate");
       }
-
     });
   }
 

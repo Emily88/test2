@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/app.css">
 <body>
 
-<div class="menuSection">
+<div class="animationType">
   <button value=1>나타내기</button>
   <button value=2>사라지기</button>
   <button value=3>페이드 인</button>
@@ -21,20 +21,22 @@
   <button value=10>오른쪽으로 날아감</button>
   <button value=11>아래에서 날아옴</button>
   <button value=12>아래로 날아감</button>
+  <button value=13>위에서 날아옴</button>
+  <button value=14>위로 날아감</button>
+  <button value=15>회전</button>
 </div>
 
-<div class="original_view">
-  <svg height="150" width="300">
-    <circle cx="50" cy="50" r="40" fill="red" transform="matrix(1,0,0,1,200,0)" />
+<div class="slideView">
+  <svg>
+    <rect width="50" height="50" fill="red" transform="matrix(1,0,0,1,200,0)" ></rect>
     Sorry, your browser does not support inline SVG.
   </svg>
 </div>
 <div class="animation_preview_pane">
-  <svg height="300" width="500">
-    <circle cx="50" cy="50" r="40" fill="red" transform="matrix(1,0,0,1,100,0)" />
+  <svg width="500" height="500" style="background: grey">
+    <rect width="50" height="50" fill="red" transform="translate(100 100)" ></rect>
     Sorry, your browser does not support inline SVG.
   </svg>
 </div>
-
 </body>
 </html>
