@@ -1,0 +1,130 @@
+.menuSection {
+    width: 300px;
+}
+
+button {
+    display: block;
+    margin-top: 5px;
+}
+
+div, circle, rect {
+   /* -webkit-transform-origin: 50% 50%; */
+    /*transform-origin: 100px 100px;*/
+}
+
+.showUp {
+    animation-name: showUp;
+    animation-duration: 0.5s;
+}
+
+.disappear {
+    animation-name: showUp;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+.fadeIn {
+    animation-name: showUp;
+    animation-duration: 2s;
+}
+
+.fadeOut {
+    animation-name: showUp;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.flyFromLeft {
+    animation-name: flyToLeft;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.flyToLeft {
+    animation-name: flyToLeft;
+    animation-duration: 2s;
+}
+
+.flyFromRight {
+    animation-name: flyToRight;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.flyToRight {
+    animation-name: flyToRight;
+    animation-duration: 2s;
+}
+
+.flyFromBottom {
+    animation-name: flyToBottom;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.flyToBottom {
+    animation-name: flyToBottom;
+    animation-duration: 2s;
+}
+
+.flyFromTop {
+    animation-name: flyToTop;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.flyToTop {
+    animation-name: flyToTop;
+    animation-duration: 2s;
+}
+
+.scaleUp {
+    animation-name: scaleUp;
+    animation-duration: 2s;
+}
+
+.scaleDown {
+    animation-name: scaleUp;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 2s;
+    transform-origin: 100px 100px;
+}
+
+rect {
+    /* doesn't work in IE */
+    transform: translate(100px, 100px);
+}
+
+@keyframes showUp {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes flyToLeft {
+    to {transform: translateX(0px);}
+}
+
+@keyframes flyToRight {
+    to {transform: translateX(300px);}
+}
+
+@keyframes flyToBottom {
+    to {transform: translateY(300px);}
+}
+
+@keyframes flyToTop {
+    to {transform: translateY(0px);}
+}
+
+@keyframes scaleUp  {
+    100%   {transform: scale(1.5);}
+}
+
+@keyframes rotate  {
+   to {transform: rotate(360deg)}
+}
