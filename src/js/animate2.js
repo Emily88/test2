@@ -34,5 +34,10 @@
   function flyToLeft() {
     console.error("flyToLeft function called!!");
 
+    var $shape1El = $("#view5687");
+
+    $shape1El.animate({
+      "transform" : "translate(0,1316.129150390625)"
+    },1500);
   }
 })();
